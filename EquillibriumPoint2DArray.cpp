@@ -70,6 +70,8 @@ int main()
         }
     }
 
+    cout << "--------------------------------------------" << endl;
+
     // check for vertical equillibrium
     int upperSum;
     int lowerSum;
@@ -90,7 +92,31 @@ int main()
         }
     }
 
+    cout << "--------------------------------------------" << endl;
+
+    //--------------------------------------------------------------------------------------------------
     // check for overall equillibrium
+    //--------------------------------------------------------------------------------------------------
+
+    for (int i = 0; i < 5; i++)
+    {
+        int totalHorizontalSum = horizontalSum[i][4];
+        int totalVerticalSum = verticalSum[4][i];
+
+        for (int j = 0; j < 5; j++)
+        {
+            leftSum = horizontalSum[i][j] - arr[i][j];
+            rightSum = totalHorizontalSum - horizontalSum[i][j];
+
+            upperSum = verticalSum[i][j] - arr[i][j];
+            lowerSum = totalVerticalSum - verticalSum[i][j];
+
+            if (leftSum == rightSum && upperSum == lowerSum)
+            {
+                cout << "The overall equillibrium is at index: (" << i << "," << j << ")" << endl;
+            }
+        }
+    }
 
     return 0;
 }
