@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+void Equillibrium(int arr[][5]);
+
 int main()
 {
     int arr[5][5] = {
@@ -10,6 +12,13 @@ int main()
         {12, 5, 2, 7, 19},
         {10, 20, 2, 3, 5}};
 
+    Equillibrium(arr);
+
+    return 0;
+}
+
+void Equillibrium(int arr[][5])
+{
     // Horizontal Sum
     int horizontalSum[5][5] = {0};
 
@@ -117,6 +126,4 @@ int main()
             }
         }
     }
-
-    return 0;
 }
