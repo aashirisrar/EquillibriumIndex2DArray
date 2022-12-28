@@ -65,10 +65,7 @@ int main()
     Sort2DArrayAlphabetically(leftRotatedCombinations, lenOfArr);
 
     cout << "The output is:" << endl;
-    for (int i = 0; i < lenOfArr; i++)
-    {
-        cout << leftRotatedCombinations[0][i];
-    }
+    cout << leftRotatedCombinations[0];
 
     return 0;
 }
